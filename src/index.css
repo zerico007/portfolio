@@ -1,0 +1,14 @@
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  /* Variables */
+  --light-theme-color: #e9eff9;
+  --dark-theme-color: #455366;
+  --light-text-color: #8c8f9a;
+  --darker-light-text-color: #2b2e39;
+  --dark-text-color: #e9eff9;
+  --font-family-base: "Open Sans", sans-serif;
+  --primary-red: #FF023E;
+}
