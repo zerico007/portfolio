@@ -27,6 +27,11 @@
       transform: translateY(-0.3rem);
     }
   }
+
+  > a {
+    width: fit-content;
+    height: auto;
+  }
 }
 
 .intro {
@@ -45,14 +50,14 @@
 }
 
 .hero {
-    position: relative;
-    width: 400px;
-    filter: grayscale(100%);
-    mix-blend-mode: multiply;
-    flex: 0.6;
+  position: relative;
+  width: 400px;
+  filter: grayscale(100%);
+  mix-blend-mode: multiply;
+  flex: 0.6;
 
-    img {
-      display: block;
-      width: 100%;
-    }
+  img {
+    display: block;
+    width: 100%;
+  }
 }

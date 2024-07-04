@@ -22,7 +22,6 @@ export default function About() {
             width="fit-content"
             color="var(--dark-text-color)"
             marginTop={100}
-            marginBottom={100}
             borderRadius={0}
             padding="4px 36px"
             _hover={{ background: "var(--primary-red)" }}
