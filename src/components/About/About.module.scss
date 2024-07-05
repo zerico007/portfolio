@@ -9,7 +9,6 @@
 .about {
   display: flex;
   flex-direction: column;
-  color: var(--darker-light-text-color);
   font-family: "Arsenal SC", sans-serif;
   flex: 1;
 
@@ -63,5 +62,9 @@
 
   @media screen and (max-width: 600px) {
     display: none;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    filter: grayscale(50%);
   }
 }

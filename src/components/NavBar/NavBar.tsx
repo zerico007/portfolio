@@ -9,8 +9,8 @@ export default function NavBar() {
       {navItems.map((item) => (
         <Button
           _hover={{ color: "var(--primary-red)", _after: { width: "100%" } }}
-          color="var(--light-text-color)"
           key={item}
+          color="inherit"
           variant="ghost"
           _selected={{ color: "var(--primary-red)" }}
           _after={{

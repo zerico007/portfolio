@@ -20,7 +20,29 @@ const theme: ThemeOverride = {
             : "var(--light-theme-color)",
         fontFamily: "var(--font-family-base)",
       },
+      "nav, footer": {
+        backgroundColor:
+          props.colorMode === "dark"
+            ? "var(--dark-theme-color)"
+            : "var(--light-theme-color)",
+      },
+      nav: {
+        color:
+          props.colorMode === "dark"
+            ? "var(--light-text-color)"
+            : "var(--dark-text-color)",
+      },
+      "footer, section": {
+        color:
+          props.colorMode === "dark"
+            ? "var(--light-text-color)"
+            : "var(--darker-light-text-color)",
+      },
     }),
+  },
+  config: {
+    initialColorMode: "system",
+    useSystemColorMode: true,
   },
 };
 

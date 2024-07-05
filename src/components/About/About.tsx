@@ -20,7 +20,7 @@ export default function About() {
             variant="solid"
             background="var(--primary-red)"
             width="fit-content"
-            color="var(--dark-text-color)"
+            color="var(--light-text-color)"
             marginTop={100}
             borderRadius={0}
             padding="4px 36px"

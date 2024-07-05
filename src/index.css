@@ -6,9 +6,9 @@
   /* Variables */
   --light-theme-color: #e9eff9;
   --dark-theme-color: #455366;
-  --light-text-color: #8c8f9a;
+  --light-text-color: #e9eff9;
   --darker-light-text-color: #2b2e39;
-  --dark-text-color: #e9eff9;
+  --dark-text-color: #8c8f9a;
   --font-family-base: "Open Sans", sans-serif;
   --primary-red: #FF023E;
 }

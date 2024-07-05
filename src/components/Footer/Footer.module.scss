@@ -4,7 +4,6 @@
   height: auto;
   bottom: 0;
   left: 0;
-  color: var(--darker-light-text-color);
   font-size: 0.8rem;
   margin-bottom: 1rem;
   display: flex;
@@ -12,7 +11,6 @@
   gap: 1rem;
   z-index: 10;
   box-sizing: border-box;
-  background-color: var(--light-theme-color);
 
   @media (max-width: 500px) {
     flex-direction: column;
