@@ -1,10 +1,15 @@
 .nav {
   display: flex;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
   justify-content: center;
   gap: 1rem;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: transparent;
+  background-color: var(--light-theme-color);
   height: 6rem;
   font-weight: 700;
+  z-index: 10;
 }
