@@ -1,0 +1,18 @@
+.mobile-menu-toggle {
+  z-index: 20;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  padding: 0;
+
+  &:hover {
+    background-color: light-dark(
+      var(--dark-theme-color),
+      var(--darker-light-text-color)
+    );
+  }
+}

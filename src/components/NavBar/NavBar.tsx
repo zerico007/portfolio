@@ -1,34 +1,33 @@
-import { Button } from "@chakra-ui/react";
-import styles from "./NavBar.module.scss";
+import { useState } from "react";
 
-const navItems = ["PROJECTS", "SKILLS", "RESUME", "CONTACT"];
+import styles from "./NavBar.module.scss";
+import { useAppContext } from "../../context/appContext";
+import NavButtons from "./components/NavButtons";
+import MobileNav from "./components/MobileNav";
+import MobileMenuToggle from "./components/MobileMenuToggle";
 
 export default function NavBar() {
+  const { mobile } = useAppContext();
+  const [showMobileNav, setShowMobileNav] = useState(false);
+
+  const toggleMobileNav = () => {
+    setShowMobileNav(!showMobileNav);
+  };
+
+  const shouldShowMobileNav = mobile && showMobileNav;
+
   return (
     <nav className={styles.nav}>
-      {navItems.map((item) => (
-        <Button
-          _hover={{ color: "var(--primary-red)", _after: { width: "100%" } }}
-          key={item}
-          color="inherit"
-          variant="ghost"
-          _selected={{ color: "var(--primary-red)" }}
-          _after={{
-            content: "''",
-            display: "block",
-            position: "absolute",
-            bottom: "0",
-            width: "0",
-            height: "3px",
-            borderRadius: "2px",
-            backgroundColor: "var(--primary-red)",
-            transition: "width 0.3s",
-          }}
-          fontWeight={700}
-        >
-          {item}
-        </Button>
-      ))}
+      {mobile ? (
+        <MobileMenuToggle
+          isOpen={shouldShowMobileNav}
+          toggleMenu={toggleMobileNav}
+        />
+      ) : (
+        <NavButtons />
+      )}
+      {shouldShowMobileNav && <MobileNav />}
     </nav>
   );
 }
+
