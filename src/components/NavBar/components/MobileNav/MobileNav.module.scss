@@ -9,11 +9,15 @@
   width: 20rem;
   align-items: center;
   z-index: 15;
-  animation: fadeInFromRight 0.4s ease-in-out;
+  animation: fadeInFromRight 0.3s ease-in-out;
   height: 35rem;
   padding: 5rem 0;
   border: 3px solid var(--darker-light-text-color);
   border-radius: 1rem 0 0 1rem;
+
+  &.closing {
+    animation: fadeOutToRight 0.3s ease-in-out;
+  }
 }
 
 @keyframes fadeInFromRight {
@@ -24,5 +28,16 @@
   to {
     opacity: 1;
     transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes fadeOutToRight {
+  from {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
   }
 }

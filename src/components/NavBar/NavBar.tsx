@@ -9,9 +9,18 @@ import MobileMenuToggle from "./components/MobileMenuToggle";
 export default function NavBar() {
   const { mobile } = useAppContext();
   const [showMobileNav, setShowMobileNav] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
 
   const toggleMobileNav = () => {
-    setShowMobileNav(!showMobileNav);
+    if (showMobileNav) {
+      setIsClosing(true);
+      setTimeout(() => {
+        setShowMobileNav(false);
+        setIsClosing(false);
+      }, 250);
+    } else {
+      setShowMobileNav(true);
+    }
   };
 
   const shouldShowMobileNav = mobile && showMobileNav;
@@ -26,7 +35,7 @@ export default function NavBar() {
       ) : (
         <NavButtons />
       )}
-      {shouldShowMobileNav && <MobileNav />}
+      {shouldShowMobileNav && <MobileNav isClosing={isClosing} />}
     </nav>
   );
 }
